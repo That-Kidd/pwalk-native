@@ -46,7 +46,7 @@ if [ -z "$SDL2" ]; then
 fi
 
 mkdir -p build-win
-"$ZIG" cc -target x86_64-windows-gnu -std=c99 -O2 -Wall \
+"$ZIG" cc -target x86_64-windows-gnu -std=c99 -O2 -s -Wall \
     -Iinclude -Isrc -Ifrontend/sdl -I"$SDL2/include/SDL2" -Dmain=SDL_main \
     src/api/*.c src/hw/*.c src/firmware/*.c frontend/sdl/*.c \
     -L"$SDL2/lib" -lmingw32 -lSDL2main -Wl,-Bstatic -lSDL2 -Wl,-Bdynamic \
