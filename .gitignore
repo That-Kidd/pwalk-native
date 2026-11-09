@@ -1,0 +1,10 @@
+# Your dumps and saves: never commit these
+*.bin
+*.state
+*.sav
+*.eep
+*.pgm
+
+# build output
+build/
+build-win/
